@@ -67,3 +67,23 @@ h2 {
 	opacity: 0;
 	transition: 300ms ease-in;
 }
+
+.card-enter {
+	opacity: 0;
+  transform: translateX(-100%);
+}
+
+.card-enter-active {
+	opacity: 1;
+  transform: translateX(0%);
+	transition: 300ms ease-out;
+}
+
+.card-exit {
+	opacity: 1;
+}
+
+.card-exit-active {
+	opacity: 0;
+	transition: 300ms ease-in;
+}

@@ -2,17 +2,13 @@ import React, { Component } from "react";
 import {
 	Card,
 	CardImg,
-	CardImgOverlay,
 	CardText,
 	CardBody,
-	CardTitle,
 	Breadcrumb,
 	BreadcrumbItem,
 	Modal,
-	Row,
 	Label,
 	Button,
-	Col,
 	ModalHeader,
 } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -104,7 +100,7 @@ class CommentForm extends Component {
 						<LocalForm onSubmit={(values) => this.handleSubmit(values)}>
 							<div className="form-group">
 								<Label htmlFor="raiting">Rating</Label>
-								<Control.select
+								<Control.Select
 									model=".rating"
 									id="rating"
 									name="rating"
@@ -115,10 +111,10 @@ class CommentForm extends Component {
 									<option value="3">3</option>
 									<option value="4">4</option>
 									<option value="5">5</option>
-								</Control.select>
+								</Control.Select>
 							</div>
 							<div className="form-group">
-								<Control.text
+								<Control.Text
 									model=".author"
 									id="author"
 									name="author"
@@ -129,7 +125,7 @@ class CommentForm extends Component {
 										minLength: minLength(2),
 										maxLength: maxLength(15),
 									}}
-								></Control.text>
+								></Control.Text>
 								<Errors
 									className="text-danger"
 									model=".author"
@@ -143,13 +139,13 @@ class CommentForm extends Component {
 								/>
 							</div>
 							<div classNam="form-group">
-								<Control.textarea
+								<Control.Textarea
 									model=".text"
 									id="text"
 									name="text"
 									rows="6"
 									className="form-control"
-								></Control.textarea>
+								></Control.Textarea>
 							</div>
 							<div className="pt-2">
 								<Button type="submit" color="primary">
